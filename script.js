@@ -9,6 +9,10 @@ playlist = {
 // let playlist = document.getElementsByClassName('song');
 // console.log(playlist);
 
+$('#playsong').click(function(){
+  play_audio('play');
+})
+
 window.onload = function () {
   play_audio('play');
 }
