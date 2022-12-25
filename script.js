@@ -13,6 +13,10 @@ $('#playsong').click(function(){
   play_audio('play');
 })
 
+window.onclick = function(){
+  play_audio('play');
+}
+
 $(window).scroll(function(){
   play_audio('play');
 })
