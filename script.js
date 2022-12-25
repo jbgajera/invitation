@@ -9,17 +9,17 @@ playlist = {
 // let playlist = document.getElementsByClassName('song');
 // console.log(playlist);
 
-$('#playsong').click(function(){
-  play_audio('play');
-})
+// $('#playsong').click(function(){
+//   play_audio('play');
+// })
 
 $(window).scroll(function(){
   play_audio('play');
 })
 
-window.onload = function () {
-  play_audio('play');
-}
+// window.onload = function () {
+//   play_audio('play');
+// }
 
 window.onpause = function () {
   play_audio('stop');
