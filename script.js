@@ -1,29 +1,57 @@
-playlist = {
-  'song_1': '001.mp3',
-  'song_2': '002.mp3',
-  'song_3': '003.mp3',
-  'song_4': '004.mp3',
-}
+// playlist = {
+//   'song_1': 'song/005.mp3',
+  
+// }
+
+var play = document.getElementById("play");
+var music =  document.querySelector("audio");
+const img = document.getElementById("123");
+
+//for pause to play btn
+let isplaying = false;
+ const pausemusic = () =>{
+  isplaying = true;
+  music.play();
+  play.classList.replace('bi-play-circle', 'bi-pause-circle');
+  img.classList.add("anime");
+ };
+
+//for play to payse btn
+const playmusic = () =>{
+  isplaying = false;
+  music.pause();
+  play.classList.replace('bi-pause-circle', 'bi-play-circle');
+  img.classList.remove("anime");
+ };
+
+ play.addEventListener('click', () => {
+  if(isplaying){
+    playmusic();
+  }
+  else{
+    pausemusic();
+  }
+ }
+ );
+
+ 
 
 
-// let playlist = document.getElementsByClassName('song');
-// console.log(playlist);
+// $('#playsong').click(function () {
+//   play_audio('play');
+// })
 
-$('#playsong').click(function () {
-  play_audio('play');
-})
+// window.onclick = function () {
+//   play_audio('play');
+// }
 
-window.onclick = function () {
-  play_audio('play');
-}
+// $(window).scroll(function () {
+//   play_audio('play');
+// })
 
-$(window).scroll(function () {
-  play_audio('play');
-})
-
-window.onload = function () {
-  play_audio('play');
-}
+// window.onload = function () {
+//   play_audio('play');
+// }
 
 window.onpause = function () {
   play_audio('stop');
@@ -33,33 +61,6 @@ window.onclose = function () {
   play_audio('stop');
 }
 
-let min = 0;
-let max = 3;
-let random =
-  Math.floor(Math.random() * (max + 1 - min)) + min;
-
-
-function play_audio(task) {
-  if (task == 'play') {
-    $(".my_audio").trigger('play');
-  }
-  if (task == 'stop') {
-    $(".my_audio").trigger('pause');
-    $(".my_audio").prop("currentTime", 0);
-  }
-}
-
-keys = Object.keys(playlist);
-$('.my_audio').append("<source id='sound_src' src=" + playlist[keys[random]] + " type='audio/mpeg'>");
-
-
-count = 0;
-$('.my_audio').on('ended', function () {
-  count++;
-  $("#sound_src").attr("src", playlist[keys[count]])[0];
-  $(".my_audio").trigger('load');
-  play_audio('play');
-});
 
 
 $(document).ready(function () {
@@ -103,3 +104,4 @@ let processScroll=()=>{
 
 
 document.addEventListener("scroll",processScroll);
+

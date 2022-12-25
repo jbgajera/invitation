@@ -18,6 +18,7 @@
 
 
     <link rel="icon" href="" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -30,17 +31,25 @@
 
 </head>
 
-<body id="playsong">
+<body>
+
+
 
     <div id="progress-bar"></div>
 
     <div class="card my-2" style="margin: 0 auto; display: table;">
-        <div class="bgImg">
-            <img src="001.jpg" alt="background">
+        <div class="bgImg" id="playsong">
+            <img src="image/001.jpg" alt="background">
 
+            <div style="position: absolute; z-index: 100; top: 15px;">
+                <a class="menu_icon play_btn">
+                    <i class="bi bi-play-circle fa-2x" style="height: 20px;" id="play"></i>
+                </a>
 
+            </div>
 
         </div>
+
         <div class="links">
 
 
@@ -74,7 +83,7 @@
             <!-- Audio -->
             <div class="m-2">
                 <div style="margin: 0 auto; display: table;">
-                    <audio class="my_audio">
+                    <audio class="my_audio" src="song/001.mp3">
 
                     </audio>
 
@@ -90,26 +99,26 @@
 
             <div class="m-0 p-0" id="carasoul">
                 <div class="slick" style="height: 360px; width: 218px;">
-                    <div class="m-0 p-0"><img src="01.webp" alt="" class="image-1">
+                    <div class="m-0 p-0"><img src="image/01.webp" alt="" class="image-1">
                     </div>
-                    <div class="m-0 p-0"><img src="02.webp" alt="" class="image-1">
+                    <div class="m-0 p-0"><img src="image/02.webp" alt="" class="image-1">
                     </div>
-                    <div class="m-0 p-0"><img src="03.webp" alt="" class="image-1">
+                    <div class="m-0 p-0"><img src="image/03.webp" alt="" class="image-1">
                     </div>
-                    <div class="m-0 p-0"><img src="04.webp" alt="" class="image-1">
+                    <div class="m-0 p-0"><img src="image/04.webp" alt="" class="image-1">
                     </div>
                 </div>
             </div>
 
             <div class="m-0 p-0" id="carasoul2">
                 <div class="slick" style="height: 355px; width: 259px;">
-                    <div class="m-1 p-0"><img src="01.webp" alt="" class="image-2">
+                    <div class="m-1 p-0"><img src="image/01.webp" alt="" class="image-2">
                     </div>
-                    <div class="m-1 p-0"><img src="02.webp" alt="" class="image-2">
+                    <div class="m-1 p-0"><img src="image/02.webp" alt="" class="image-2">
                     </div>
-                    <div class="m-1 p-0"><img src="03.webp" alt="" class="image-2">
+                    <div class="m-1 p-0"><img src="image/03.webp" alt="" class="image-2">
                     </div>
-                    <div class="m-1 p-0"><img src="04.webp" alt="" class="image-2">
+                    <div class="m-1 p-0"><img src="image/04.webp" alt="" class="image-2">
                     </div>
                 </div>
             </div>
@@ -135,19 +144,43 @@
                 <div style="top: 4418px;left: 10px;height: 15px;width: 170px;"></div>
             </a>
 
+            <!--music player-->
+            <div class="row mb-2">
+                <div class="col-6 d-flex flex-row-reverse">
+                    <div class="img_container1">
+                        <img src="image/03.webp" id="123" style="width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.2);">
+                    </div>
+                </div>
+                <div class="col-6 d-flex align-items-center justify-content-start">
+                    <div>
+                        <a class="menu_icon2 play_btn">
+                            <i class="bi bi-play-circle fa-2x" style="height: 20px;" id="play"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
 
         </div>
 
-    </div>
 
     </div>
+
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 
-
     <script src="script.js"></script>
+
 
 
 </body>

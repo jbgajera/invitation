@@ -76,7 +76,7 @@ div.links a div {
 /* progressbar */
 #progress-bar{
   --scrollAmount:0%;
-  background-image: linear-gradient(120deg, #FF7721 0%, #5F534C 100%);
+  background-image: linear-gradient(120deg, #FF7721 0%, #fff52d 100%);
   width: var(--scrollAmount);
   height: 3px;
   position: fixed;
@@ -93,4 +93,50 @@ div.links a div {
   border-radius: 15px;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
   background: rgb(255, 61, 94);
+}
+
+/* play */
+
+.menu_icon i{
+  cursor: pointer;
+  left: 20px;
+  color: #eb5d1e;
+  position: absolute;
+  text-align: center;
+  width: 24px !important;
+  height: 24px !important;
+
+ 
+}
+
+.menu_icon2 i{
+  cursor: pointer;
+  color: #eb5d1e;
+}
+
+/* music player css */
+.img_container1 {
+  width: 100px;
+  height: 100px;
+}
+
+/* .img-1{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.2);
+} */
+
+.anime {
+  animation: rotateimage 10s linear infinite;
+}
+
+@keyframes rotateimage {
+  from{ 
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
 }
