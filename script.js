@@ -9,15 +9,15 @@ playlist = {
 // let playlist = document.getElementsByClassName('song');
 // console.log(playlist);
 
-$('#playsong').click(function(){
+$('#playsong').click(function () {
   play_audio('play');
 })
 
-window.onclick = function(){
+window.onclick = function () {
   play_audio('play');
 }
 
-$(window).scroll(function(){
+$(window).scroll(function () {
   play_audio('play');
 })
 
@@ -87,3 +87,19 @@ $(document).ready(function () {
     cssEase: 'linear'
   });
 });
+
+
+// PROGRESSBAR
+
+let processScroll=()=>{
+  let docElem=document.documentElement,
+  docBody=document.body,
+  scrollTop=docElem["scrollTop"] || docBody["scrollTop"],
+  scrollBottom=(docElem["scrollHeight"] || docBody["scrollHeight"])-window.innerHeight,
+  scrollPercent=scrollTop/scrollBottom * 100 + "%";
+
+  document.getElementById("progress-bar").style.setProperty("--scrollAmount",scrollPercent);
+}
+
+
+document.addEventListener("scroll",processScroll);
