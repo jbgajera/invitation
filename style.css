@@ -74,8 +74,8 @@ div.links a div {
 
 
 /* progressbar */
-#progress-bar{
-  --scrollAmount:0%;
+#progress-bar {
+  --scrollAmount: 0%;
   background-image: linear-gradient(120deg, #FF7721 0%, #fff52d 100%);
   width: var(--scrollAmount);
   height: 3px;
@@ -97,46 +97,155 @@ div.links a div {
 
 /* play */
 
-.menu_icon i{
+.menu_icon i {
   cursor: pointer;
   left: 20px;
   color: #eb5d1e;
   position: absolute;
   text-align: center;
-  width: 24px !important;
-  height: 24px !important;
-
- 
+  width: 40px !important;
+  height: 40px !important;
 }
 
-.menu_icon2 i{
+.menu_icon2 i {
   cursor: pointer;
   color: #eb5d1e;
+  width: 40px !important;
+  height: 40px !important;
+
 }
+
 
 /* music player css */
 .img_container1 {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 }
 
-/* .img-1{
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.2);
-} */
+
 
 .anime {
   animation: rotateimage 10s linear infinite;
+
 }
 
+
+
 @keyframes rotateimage {
-  from{ 
+  from {
     transform: rotate(0deg);
   }
-  to{
+
+  to {
     transform: rotate(360deg);
   }
+}
+
+.circle {
+  /* background:#ffffff; */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /* box-shadow: 0px 0px 1px 1px #0000001a; */
+}
+
+.pulse {
+  animation: pulse-animation 1s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px #ff6b2c4f;
+  }
+
+  100% {
+    box-shadow: 0 0 0 20px #fff1eb4f;
+  }
+}
+
+.icon {
+  position:absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 40px;
+  height: 30px;
+}
+
+.animation {
+  width: 5px;
+  height: 40px;
+  background-color: #ff972e;
+  border-radius: 5px;
+  transform-origin: bottom;
+  animation: bounce 2.5s ease infinite alternate;
+  content: '';
+}
+
+@keyframes bounce {
+  10% {
+    transform: scaleY(0.3);
+    /* start by scaling to 30% */
+  }
+
+  30% {
+    transform: scaleY(1);
+    /* scale up to 100% */
+  }
+
+  60% {
+    transform: scaleY(0.5);
+    /* scale down to 50% */
+  }
+
+  80% {
+    transform: scaleY(0.75);
+    /* scale up to 75% */
+  }
+
+  100% {
+    transform: scaleY(0.6);
+    /* scale down to 60% */
+  }
+}
+
+.animation:nth-of-type(2) {
+  animation-delay: -2.5s;
+  /* Start at the end of animation */
+}
+
+.animation:nth-of-type(4) {
+  animation-delay: -3.9s;
+  /* Start mid-way of return of animation */
+}
+
+
+/* Styles for website counter container */
+.website-counter {
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 5px;
+  background-color: #ff972e;
+  width: 50px;
+  /* margin-left: 10px; */
+}
+
+/* Styles for reset button */
+#reset {
+  margin-top: 50px;
+  background-color: #008cba;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 8px 20px;
+  color: white;
+  border: 20px;
+}
+
+.social-icon:hover {
+  transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.social-icon {
+  box-shadow: 0 4px 8px 0 #929292;
 }
