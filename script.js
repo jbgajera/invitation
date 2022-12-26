@@ -104,21 +104,21 @@ const playmusic = () =>{
 //   play_audio('play');
 // }
 
-// $(window).scroll(function () {
-//   play_audio('play');
-// })
+$(window).scroll(function () {
+  playmusic();
+})
 
-// window.onload = function () {
-//   play_audio('play');
-// }
+window.onload = function () {
+  playmusic();
+}
 
-// window.onpause = function () {
-//   play_audio('stop');
-// }
+window.onpause = function () {
+  pausemusic();
+}
 
-// window.onclose = function () {
-//   play_audio('stop');
-// }
+window.onclose = function () {
+  pausemusic();
+}
 
 
 
