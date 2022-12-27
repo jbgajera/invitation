@@ -94,10 +94,6 @@ const playmusic = () =>{
  );
 
 
-window.onload = function () {
-  playmusic();
-}
-
 window.onpause = function () {
   pausemusic();
 }
