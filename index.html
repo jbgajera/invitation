@@ -7,16 +7,13 @@
     <meta property="og:description" content="ચિ.અંકીત  સંગ  ચિ.વિજ્ઞા, ચિ.અનિતા  સંગ  ચિ.દિવ્યેશ" />
     <meta property="og:image"
         content="https://drive.google.com/uc?export=download&id=1ZbGh5ioM-obcYTy7DbaZWCXNjqO5NkKQ" />
-    
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="maximum-scale=1,width=400">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <title>સોરઠીયા પરિવાર</title>
     <link rel="icon" type="image/x-icon" href="image/05.webp">
-
-
-    <link rel="icon" href="" type="image/png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
 
@@ -38,14 +35,18 @@
 
     <div class="card my-2" style="margin: 0 auto; display: table;">
         <div class="bgImg" id="playsong">
-            <img src="image/001.jpg" alt="background">
+            <img style="border-radius: 7px;" src="image/001.jpg" alt="background">
 
             <div style="position: absolute; z-index: 100; top: 15px;">
 
-                <a class="menu_icon play_btn" id="playPaushBtn">
-                    <i class="bi bi-pause-circle fa-2x circle" style="height: 20px;" id="play"></i>
-                    <i class="circle" style="max-height: 20px; max-width: 20px; margin-top: 15.3px; margin-left: 10px;"
+                <a class="menu_icon">
+
+                    <i class="circle" style="max-height: 32px; max-width: 31px; top: 8.5px; margin-left: 4.2px;"
                         id="extra"></i>
+                </a>
+
+                <a class="menu_icon play_btn" id="playPaushBtn">
+                    <i class="bi bi-pause-circle fa-2x" id="play"></i>
                 </a>
 
             </div>
@@ -85,7 +86,7 @@
             <!-- Audio -->
             <div class="m-2">
                 <div style="margin: 0 auto; display: table;">
-                    <audio class="my_audio" src="song/005.mp3" loop autoplay preload="auto">
+                    <audio class="my_audio" src="song/001.mp3" loop autoplay preload="auto">
 
                     </audio>
 
@@ -98,7 +99,7 @@
 
             <!-- Image Slider -->
 
-            <!-- 
+            
             <div class="m-0 p-0" id="carasoul">
                 <div class="slick" style="height: 360px; width: 218px;">
                     <div class="m-0 p-0"><img src="image/01.webp" alt="" class="image-1">
@@ -123,7 +124,7 @@
                     <div class="m-1 p-0"><img src="image/04.webp" alt="" class="image-2">
                     </div>
                 </div>
-            </div> -->
+            </div>
 
 
 
@@ -157,20 +158,28 @@
                         height: 100%;
                         border-radius: 50%;
                         object-fit: cover;
-                        box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.2);">
+                        box-shadow: 0px 0px 1px 3px #0000001a;">
 
                     </div>
 
                 </div>
 
                 <div class="col-4 d-flex justify-content-center align-items-center" style="margin-bottom: 70px; ">
-                 <div style="position:relative; z-index: 100; top: 12px; right:37px; ">
-                        <a class="menu_icon play_btn" id="playPaushBtnSecond">
-                            <i class="bi bi-pause-circle fa-2x circle"  id="playSecond"></i>
-                            <i class="circle" style="max-height: 20px; max-width: 20px; margin-top: 15.3px; margin-left: 10px;"
+                    <div style="position:relative; z-index: 100; top: 12px; right:37px; ">
+
+                       
+                        <a class="menu_icon">
+
+                            <i class="circle" style="max-height: 32px; max-width: 31px; top: 8.5px; margin-left: 4.2px;"
                                 id="extraSecond"></i>
                         </a>
+
+                        <a class="menu_icon play_btn" id="playPaushBtnSecond">
+                            <i class="bi bi-pause-circle fa-2x" id="playSecond"></i>
+                        </a>
+
                     </div>
+
                 </div>
 
                 <!-- <div class="col-3 d-flex justify-content-between align-items-center">
@@ -192,7 +201,7 @@
 
                     <div class="text-center">TOTAL VISIT</div>
                     <div class="d-flex justify-content-center">
-                        <div class="website-counter text-center px-2"></div>
+                        <div class="website-counter text-center px-2" id="count"></div>
                     </div>
                 </div>
             </div>
@@ -200,10 +209,12 @@
 
             <!-- Footer -->
 
-            <footer>
+            <footer style="border: 1px solid #f9790c;
+            border-radius: 20px;
+            box-shadow: 0px 0px 1px 1px #92929269;">
                 <div>
                     <div style="display: flex; flex-direction: column; align-items:center">
-                        <a href="index.html"><img src="image/LOGO.png" width="200px" alt=""></a>
+                        <a href="https://shreenathjigrafix.in/"><img src="image/LOGO.png" width="200px" alt=""></a>
                     </div>
                 </div>
 

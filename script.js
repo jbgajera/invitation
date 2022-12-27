@@ -93,20 +93,6 @@ const playmusic = () =>{
  }
  );
 
- 
-
-
-// $('#playsong').click(function () {
-//   play_audio('play');
-// })
-
-// window.onclick = function () {
-//   play_audio('play');
-// }
-
-$(window).scroll(function () {
-  playmusic();
-})
 
 window.onload = function () {
   playmusic();
@@ -168,24 +154,34 @@ document.addEventListener("scroll",processScroll);
 
 // visitCount
 
-var counterContainer = document.querySelector(".website-counter");
-var resetButton = document.querySelector("#reset");
-var visitCount = localStorage.getItem("page_view");
+// var counterContainer = document.querySelector(".website-counter");
+// var resetButton = document.querySelector("#reset");
+// var visitCount = localStorage.getItem("page_view");
 
 // Check if page_view entry is present
-if (visitCount) {
-visitCount = Number(visitCount) + 1;
-localStorage.setItem("page_view", visitCount);
-} else {
-visitCount = 1;
-localStorage.setItem("page_view", 1);
-}
-counterContainer.innerHTML = visitCount;
+// if (visitCount) {
+// visitCount = Number(visitCount) + 1;
+// localStorage.setItem("page_view", visitCount);
+// } else {
+// visitCount = 1;
+// localStorage.setItem("page_view", 1);
+// }
+// counterContainer.innerHTML = visitCount;
 
-// Adding onClick event listener
-resetButton.addEventListener("click", () => {
-visitCount = 1;
-localStorage.setItem("page_view", 1);
-counterContainer.innerHTML = visitCount;
-});
+// // Adding onClick event listener
+// resetButton.addEventListener("click", () => {
+// visitCount = 1;
+// localStorage.setItem("page_view", 1);
+// counterContainer.innerHTML = visitCount;
+// });
 
+const countEl = document.getElementById("count");
+      countvisits();
+
+      function countvisits() {
+        fetch('https://api.countapi.xyz/update/shreenathjigrafix.in/Invitation/?amount=1')
+          .then((res) => res.json())
+          .then((res) => {
+            countEl.innerHTML = res.value;
+          });
+      }
